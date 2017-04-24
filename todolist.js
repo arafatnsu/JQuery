@@ -16,5 +16,11 @@ $(document).ready(function(){
     $('#add_task').on('click', addListItem);
     $('#list_item').on('change', '.completeItem', completeItem);
     $('#list_item').on('click', '.deleteItem', deleteItem);
+    $('#to_do').on('keypress', function(event) {
+        if(event.which === 13) {
+            addListItem();
+            event.preventDefault();
+        }
+    });
 
 });
