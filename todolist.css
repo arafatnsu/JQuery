@@ -37,3 +37,6 @@ input[type=checkbox] {
     }
 }
 
+.error_message {
+  color:red;
+}

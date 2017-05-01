@@ -1,11 +1,13 @@
-// validating task on basis of user input, throw error if field is empty
+// validating task on basis of user's input
 function addItem() {
   var text = $('#to_do').val();
     if(text === '') {
-      alert('name is required');
+      $('.error_message').html('Name is required.')
+      //alert('name is required');
     } else {
       $('#list_item').append('<li><input class="completeItem" type="checkbox">'+text+'<i class="fa fa-trash-o deleteItem" aria-hidden="true"></li>');
       $('#to_do').val('');
+      $('.error_message').html('')
     }
 }
 
@@ -20,7 +22,7 @@ function addListItem() {
   // add task while pressing enter key
   $('#to_do').on('keypress', function(event) {
         if(event.which === 13) {
-            addItem();
+            addItem(); 
             event.preventDefault();
         }
     });
@@ -37,10 +39,13 @@ function completeItem() {
 function deleteItem() {
   $(document).on('click', '.deleteItem', function() {
     if($(this).parent().find('.completeItem').is(':checked')) {
+      if (confirm("Do you really want to delete this?")) {
           $(this).parent().remove();
+          }
+           return false;
       }
     else {
-      alert('you have not selected');
+     alert('You have not selected any item.');
     }
   })
     
