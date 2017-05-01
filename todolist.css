@@ -1,0 +1,39 @@
+h1 {
+    font-size: 36px;
+    color: #ca5c5c;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.deleteItem {
+    float: right;
+    color: #9d9d9d;
+    cursor: pointer;
+}
+
+input[type=checkbox] {
+    margin-right: 15px;
+}
+
+#list_item {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#list_item li {
+    padding: 8px 0px 8px 0px;
+    border-bottom: 1px solid #eee;
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 1199px) {
+    #add_task {
+        margin: 4px 0px 0px 15px;
+    }
+}
+
