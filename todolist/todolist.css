@@ -7,7 +7,7 @@ h1 {
 
 .deleteItem {
     float: right;
-    color: #9d9d9d;
+    color: #8a7835;
     cursor: pointer;
 }
 
@@ -24,6 +24,8 @@ input[type=checkbox] {
 #list_item li {
     padding: 8px 0px 8px 0px;
     border-bottom: 1px solid #eee;
+    font-family: cursive;
+    color: darkolivegreen;
 }
 
 .done {
